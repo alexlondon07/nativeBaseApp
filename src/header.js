@@ -1,31 +1,22 @@
 import React, { Component } from 'react';
 import { Header, Left, Icon, Button, Body , Title} from 'native-base';
+import BackButton from './back-button';
+import HomeButton from './home-button';
 
-class CustomHeader extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-        };
-    }
-
-    render() {
-        const { navigation, title, nameIcon, isHome } = this.props;
-        return (
-            <Header>
-                <Left>
-                    <Button
-                        transparent
-                        onPress= { (isHome) ? ()=> navigation.openDrawer(): ()=>navigation.goBack(null)}
-                    >
-                    <Icon name= { nameIcon }/>
-                    </Button>
-                </Left>
-                <Body>
-                    <Title> { title }</Title>
-                </Body>
-            </Header>
-        );
-    }
+const CustomHeader =  props =>{ 
+    return (
+        <Header>
+            <Left>
+                { props.hasBackButtom ? 
+                    <BackButton navigation = { props.navigation }/>
+                    :  
+                    <HomeButton navigation = { props.navigation} /> 
+                }
+            </Left>
+            <Body>
+                <Title> { props.title }</Title>
+            </Body>
+        </Header>
+    );
 }
 export default CustomHeader;

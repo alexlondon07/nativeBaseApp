@@ -26,7 +26,7 @@ export default class SideMenu extends Component {
         <Container>
             <Content> 
                 <ImageBackground
-                    source = {{ uri: 'http://mooxidesign.com/wp-content/uploads/2015/11/material-background.png'}}
+                    source = {{ uri: 'https://cdn.dribbble.com/users/136211/screenshots/2008336/bg-pattern-blue-sm.png' }}
                     style = { styles.imageBackground }
                 >
                 <Image
