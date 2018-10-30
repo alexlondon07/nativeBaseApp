@@ -16,7 +16,7 @@ class CustomHeader extends Component {
                 <Left>
                     <Button
                         transparent
-                        onPress= { (isHome) ? ()=> navigation.navigate.openDrawer(): ()=>navigation.navigate.goBack(null)}
+                        onPress= { (isHome) ? ()=> navigation.openDrawer(): ()=>navigation.goBack(null)}
                     >
                     <Icon name= { nameIcon }/>
                     </Button>

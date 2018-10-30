@@ -12,6 +12,7 @@ class Settings extends Component {
                     title = "Configuración"
                     nameIcon = "home"
                     isHome = {true}
+                    navigation= { navigation }
                 />
             )
         }
