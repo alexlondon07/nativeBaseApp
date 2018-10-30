@@ -13,7 +13,7 @@ const routes = [
         icon: 'home'
     },
     {
-        screen: 'SettingsScreen',
+        screen: 'SettingsStack',
         title: 'Configuración',
         icon: 'ios-settings'
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, Container, Content} from 'native-base';
+import { Text, Container, Content, Button} from 'native-base';
 import CustomHeader from './header';
 
 class Settings extends Component {
@@ -17,12 +17,18 @@ class Settings extends Component {
     }
 
     render() {
+        const { navigation } = this.props;
         return (
-        <Container>
-            <Content>
-                <Text> Configuración </Text>
-            </Content>
-        </Container>
+            <Container>
+                <Content>
+                    <Text> Configuración </Text>
+                    <Button
+                        onPress = { ()=> navigation.navigate('TermsScreen') }
+                    >
+                        <Text>Ir a Términos y Condiciones</Text>
+                    </Button>
+                </Content>
+            </Container>
         )
     }
 }
